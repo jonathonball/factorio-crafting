@@ -3,6 +3,8 @@ digraph science_packs {
   subgraph resources {
     "Coal"          [shape = Mcircle, color = "#a0522d"];
     "Petroleum gas" [shape = Mcircle, color = "#a0522d"];
+    "Heavy oil"     [shape = Mcircle, color = "#a0522d"];
+    "Light oil"     [shape = Mcircle, color = "#a0522d"];
     "Iron ore"      [shape = Mcircle, color = "#a0522d"];
     "Copper ore"    [shape = Mcircle, color = "#a0522d"];
 
@@ -10,10 +12,10 @@ digraph science_packs {
   }
 
   subgraph science_packs {
-    "Science pack 1"        [shape = Msquare, color = "#ff0000"];
-    "Science pack 2"        [shape = Msquare, color = "#00ff00"];
-    "Science pack 3"        [shape = Msquare, color = "#0000ff"];
-    "Military science pack" [shape = Msquare, color = "#9932CC"];
+    "Automation science pack" [shape = Msquare, color = "#ff0000"];
+    "Logistics science pack"  [shape = Msquare, color = "#00ff00"];
+    "Chemical science pack"   [shape = Msquare, color = "#0000ff"];
+    "Military science pack"   [shape = Msquare, color = "#9932CC"];
 
     rank = max;
   }
@@ -29,6 +31,12 @@ digraph science_packs {
     "Coal";
     "Petroleum gas";
   } -> "Plastic bar" [color = "#a0522d"];
+
+  {
+    "Heavy oil";
+    "Light oil";
+    "Petroleum gas";
+  } -> "Solid fuel" [color = "#a0522d"];
 
   "Iron plate" -> "Firearm magazine";
 
@@ -63,12 +71,6 @@ digraph science_packs {
   } -> "Engine unit";
 
   {
-    "Iron plate";
-    "Iron gear";
-    "Electronic circuit";
-  } -> "Electric mining drill";
-
-  {
     "Plastic bar";
     "Copper cable";
     "Electronic circuit";
@@ -89,18 +91,18 @@ digraph science_packs {
   {
     "Copper plate";
     "Iron gear";
-  } -> "Science pack 1" [color = "#ff0000"];
+  } -> "Automation science pack" [color = "#ff0000"];
 
   {
     "Transport belt";
     "Inserter";
-  } -> "Science pack 2" [color = "#00ff00"];
+  } -> "Logistics science pack" [color = "#00ff00"];
 
   {
     "Engine unit";
-    "Electric mining drill";
+    "Solid fuel";
     "Advanced circuit";
-  } -> "Science pack 3" [color = "#0000ff"];
+  } -> "Chemical science pack" [color = "#0000ff"];
 
   {
     "Piercing rounds magazine";
