@@ -25,11 +25,11 @@ digraph science_packs {
   "Iron plate" -> "Iron gear";
 
   "Iron plate" -> "Steel plate";
- 
+
   "Copper ore" -> "Copper plate" [color = "#a0522d"]; 
 
   "Copper plate" -> "Copper cable";
- 
+
   {
     "Iron plate";
     "Iron gear";
@@ -75,15 +75,15 @@ digraph science_packs {
   {
     "Iron plate"
   } -> "Grenade";
- 
+
   "Iron plate" -> "Firearm magazine";
- 
+
   {
     "Copper plate";
     "Steel plate";
     "Firearm magazine";
   } -> "Piercing rounds magazine";
- 
+
   {
     "Iron plate";
     "Copper plate";
