@@ -1,0 +1,113 @@
+digraph science_packs {
+
+  subgraph resources {
+    "Coal"          [shape = Mcircle, color = "#a0522d"];
+    "Petroleum gas" [shape = Mcircle, color = "#a0522d"];
+    "Iron ore"      [shape = Mcircle, color = "#a0522d"];
+    "Copper ore"    [shape = Mcircle, color = "#a0522d"];
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    "Science pack 1"        [shape = Msquare, color = "#ff0000"];
+    "Science pack 2"        [shape = Msquare, color = "#00ff00"];
+    "Science pack 3"        [shape = Msquare, color = "#0000ff"];
+    "Military science pack" [shape = Msquare, color = "#9932CC"];
+
+    rank = max;
+  }
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  "Coal" -> "Grenade" [color = "#a0522d"];
+  "Iron plate" -> "Grenade";
+
+  {
+    "Coal";
+    "Petroleum gas";
+  } -> "Plastic bar" [color = "#a0522d"];
+
+  "Iron plate" -> "Firearm magazine";
+
+  "Iron plate" -> "Pipe";
+
+  "Iron plate" -> "Iron gear";
+
+  "Iron plate" -> "Steel plate";
+
+  "Copper plate" -> "Copper cable";
+
+  {
+    "Iron plate";
+    "Iron gear";
+  } -> "Transport belt";
+
+  {
+    "Iron plate";
+    "Copper cable";
+  } -> "Electronic circuit";
+
+  {
+    "Iron plate";
+    "Iron gear";
+    "Electronic circuit";
+  } -> "Inserter";
+
+  {
+    "Steel plate";
+    "Iron gear";
+    "Pipe";
+  } -> "Engine unit";
+
+  {
+    "Iron plate";
+    "Iron gear";
+    "Electronic circuit";
+  } -> "Electric mining drill";
+
+  {
+    "Plastic bar";
+    "Copper cable";
+    "Electronic circuit";
+  } -> "Advanced circuit";
+
+  {
+    "Copper plate";
+    "Steel plate";
+    "Firearm magazine";
+  } -> "Piercing rounds magazine";
+
+  {
+    "Iron plate";
+    "Copper plate";
+    "Iron gear";
+  } -> "Gun turret"
+
+  {
+    "Copper plate";
+    "Iron gear";
+  } -> "Science pack 1" [color = "#ff0000"];
+
+  {
+    "Transport belt";
+    "Inserter";
+  } -> "Science pack 2" [color = "#00ff00"];
+
+  {
+    "Engine unit";
+    "Electric mining drill";
+    "Advanced circuit";
+  } -> "Science pack 3" [color = "#0000ff"];
+
+  {
+    "Piercing rounds magazine";
+    "Grenade";
+    "Gun turret";
+  } -> "Military science pack" [color = "#9932CC"];
+
+  ratio = 0.8;
+
+}
