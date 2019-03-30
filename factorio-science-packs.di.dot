@@ -1,18 +1,18 @@
 digraph science_packs {
 
   subgraph resources {
-    "Coal" [shape = Mcircle, color = "#a0522d"];
+    "Coal"          [shape = Mcircle, color = "#a0522d"];
     "Petroleum gas" [shape = Mcircle, color = "#a0522d"];
-    "Iron ore" [shape = Mcircle, color = "#a0522d"];
-    "Copper ore" [shape = Mcircle, color = "#a0522d"];
+    "Iron ore"      [shape = Mcircle, color = "#a0522d"];
+    "Copper ore"    [shape = Mcircle, color = "#a0522d"];
 
     rank = min;
   }
 
   subgraph science_packs {
-    "Science pack 1" [shape = Msquare, color = "#ff0000"];
-    "Science pack 2" [shape = Msquare, color = "#00ff00"];
-    "Science pack 3" [shape = Msquare, color = "#0000ff"];
+    "Science pack 1"        [shape = Msquare, color = "#ff0000"];
+    "Science pack 2"        [shape = Msquare, color = "#00ff00"];
+    "Science pack 3"        [shape = Msquare, color = "#0000ff"];
     "Military science pack" [shape = Msquare, color = "#9932CC"];
 
     rank = max;
@@ -20,13 +20,23 @@ digraph science_packs {
 
   "Iron ore" -> "Iron plate" [color = "#a0522d"];
 
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  "Coal" -> "Grenade" [color = "#a0522d"];
+  "Iron plate" -> "Grenade";
+
+  {
+    "Coal";
+    "Petroleum gas";
+  } -> "Plastic bar" [color = "#a0522d"];
+
+  "Iron plate" -> "Firearm magazine";
+
   "Iron plate" -> "Pipe";
 
   "Iron plate" -> "Iron gear";
 
   "Iron plate" -> "Steel plate";
-
-  "Copper ore" -> "Copper plate" [color = "#a0522d"]; 
 
   "Copper plate" -> "Copper cable";
 
@@ -59,24 +69,10 @@ digraph science_packs {
   } -> "Electric mining drill";
 
   {
-    "Coal";
-    "Petroleum gas";
-  } -> "Plastic bar" [color = "#a0522d"];
-
-  {
     "Plastic bar";
     "Copper cable";
     "Electronic circuit";
   } -> "Advanced circuit";
-
-  {
-    "Coal" 
-  } -> "Grenade" [color = "#a0522d"];
-  {
-    "Iron plate"
-  } -> "Grenade";
-
-  "Iron plate" -> "Firearm magazine";
 
   {
     "Copper plate";
