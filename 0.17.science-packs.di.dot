@@ -1,10 +1,12 @@
 digraph science_packs {
 
   subgraph resources {
-    "Coal"          [shape = Mcircle, color = "#a0522d"];
-    "Crude oil"     [shape = Mcircle, color = "#a0522d"];
-    "Iron ore"      [shape = Mcircle, color = "#a0522d"];
-    "Copper ore"    [shape = Mcircle, color = "#a0522d"];
+    "Coal"       [shape = Mcircle, color = "#a0522d"];
+    "Crude oil"  [shape = Mcircle, color = "#a0522d"];
+    "Iron ore"   [shape = Mcircle, color = "#a0522d"];
+    "Copper ore" [shape = Mcircle, color = "#a0522d"];
+    "Water"      [shape = Mcircle, color = "#a0522d"];
+    "Stone"      [shape = Mcircle, color = "#a0522d"];
 
     rank = min;
   }
@@ -13,12 +15,28 @@ digraph science_packs {
     "Automation science pack" [shape = Msquare, color = "#ff0000"];
     "Logistics science pack"  [shape = Msquare, color = "#00ff00"];
     "Chemical science pack"   [shape = Msquare, color = "#0000ff"];
-    "Military science pack"   [shape = Msquare, color = "#9932CC"];
+    "Military science pack"   [shape = Msquare, color = "#D3D3D3"];
+    "Production science pack" [shape = Msquare, color = "#9932CC"];
+    "Utility science pack"    [shape = Msquare, color = "#FFFF00"];
 
     rank = max;
   }
 
-  "Crude oil" -> {
+  "Water" -> "Sulfur" [color = "#a0522d"];
+  "Petroleum gas" -> "Sulfur";
+
+  {
+    "Iron plate";
+    "Sulfur";
+  } -> "Sulfuric acid";
+  "Water" -> "Sulfuric acid" [color = "#a0522d"];
+
+  "Stone" -> "Stone brick" [color = "#a0522d"];
+
+  {
+    "Crude oil";
+    "Water";
+  } -> {
     "Petroleum gas";
     "Heavy oil";
     "Light oil";
@@ -42,7 +60,15 @@ digraph science_packs {
     "Petroleum gas";
   } -> "Solid fuel" [color = "#a0522d"];
 
+  "Stone" -> "Rail" [color = "#a0522d"];
+  {
+    "Iron stick"
+    "Steel plate"
+  } -> "Rail";
+
   "Iron plate" -> "Firearm magazine";
+
+  "Iron plate" -> "Iron stick";
 
   "Iron plate" -> "Pipe";
 
@@ -93,6 +119,50 @@ digraph science_packs {
   } -> "Gun turret"
 
   {
+    "Advanced circuit";
+    "Steel plate";
+    "Stone brick";
+  } -> "Electric furnace";
+
+  {
+    "Electronic circuit";
+    "Advanced circuit";
+  } -> "Productivity module";
+
+  {
+    "Copper plate";
+    "Iron plate";
+    "Sulfuric acid";
+  } -> "Battery";
+
+  {
+    "Copper plate";
+    "Plastic bar";
+    "Steel plate";
+  } -> "Low density structure";
+
+  {
+    "Electronic circuit";
+    "Advanced circuit";
+    "Sulfuric acid";
+  } -> "Processing unit";
+
+  "Heavy oil" -> "Lubricant";
+
+  {
+    "Electronic circuit";
+    "Engine unit";
+    "Lubricant";
+  } -> "Electric engine unit"
+
+  {
+    "Battery";
+    "Electric engine unit";
+    "Electronic circuit";
+    "Steel plate";
+  } -> "Flying robot frame";
+
+  {
     "Copper plate";
     "Iron gear";
   } -> "Automation science pack" [color = "#ff0000"];
@@ -112,7 +182,19 @@ digraph science_packs {
     "Piercing rounds magazine";
     "Grenade";
     "Gun turret";
-  } -> "Military science pack" [color = "#9932CC"];
+  } -> "Military science pack" [color = "#D3D3D3"];
+
+  {
+    "Electric furnace";
+    "Productivity module";
+    "Rail";
+  } -> "Production science pack" [color = "#9932CC"];
+
+  {
+    "Flying robot frame";
+    "Low density structure";
+    "Processing unit";
+  } -> "Utility science pack"    [color = "#FFFF00"];
 
   ratio = 0.8;
 
