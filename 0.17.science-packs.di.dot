@@ -2,9 +2,7 @@ digraph science_packs {
 
   subgraph resources {
     "Coal"          [shape = Mcircle, color = "#a0522d"];
-    "Petroleum gas" [shape = Mcircle, color = "#a0522d"];
-    "Heavy oil"     [shape = Mcircle, color = "#a0522d"];
-    "Light oil"     [shape = Mcircle, color = "#a0522d"];
+    "Crude oil"     [shape = Mcircle, color = "#a0522d"];
     "Iron ore"      [shape = Mcircle, color = "#a0522d"];
     "Copper ore"    [shape = Mcircle, color = "#a0522d"];
 
@@ -19,6 +17,12 @@ digraph science_packs {
 
     rank = max;
   }
+
+  "Crude oil" -> {
+    "Petroleum gas";
+    "Heavy oil";
+    "Light oil";
+  } [color = "#a0522d"];
 
   "Iron ore" -> "Iron plate" [color = "#a0522d"];
 
