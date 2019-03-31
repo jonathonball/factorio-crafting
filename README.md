@@ -9,10 +9,8 @@ Instructions for rendering these yourself.
 ```
 $ sudo apt install graphviz
 $ git clone git@github.com:jonathonball/factorio-crafting.git
-$ dot -T svg -O 0.16.science-packs.di.dot
-$ dot -T png -O 0.16.science-packs.di.dot
-$ dot -T svg -O 0.17.science-packs.di.dot
-$ dot -T png -O 0.17.science-packs.di.dot
+$ chmod u+x generate.sh
+$ ./generate.sh
 ```
 
 Pre-rendered
