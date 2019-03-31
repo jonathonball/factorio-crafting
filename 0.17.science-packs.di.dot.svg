@@ -12,10 +12,10 @@
 <!-- Coal -->
 <g id="node1" class="node">
 <title>Coal</title>
-<ellipse fill="none" stroke="#a0522d" cx="724.5" cy="-1358" rx="27.0966" ry="27.0966"/>
+<ellipse fill="#a0522d" stroke="#a0522d" cx="724.5" cy="-1358" rx="27.0966" ry="27.0966"/>
 <polyline fill="none" stroke="#a0522d" points="742.5546,-1378.4732 706.4454,-1378.4732 "/>
 <polyline fill="none" stroke="#a0522d" points="742.5546,-1337.5268 706.4454,-1337.5268 "/>
-<text text-anchor="middle" x="724.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#000000">Coal</text>
+<text text-anchor="middle" x="724.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">Coal</text>
 </g>
 <!-- Grenade -->
 <g id="node21" class="node">
@@ -44,10 +44,10 @@
 <!-- Crude oil -->
 <g id="node2" class="node">
 <title>Crude oil</title>
-<ellipse fill="none" stroke="#a0522d" cx="1589.5" cy="-1358" rx="44.393" ry="44.393"/>
+<ellipse fill="#a0522d" stroke="#a0522d" cx="1589.5" cy="-1358" rx="44.393" ry="44.393"/>
 <polyline fill="none" stroke="#a0522d" points="1618.7313,-1391.1471 1560.2687,-1391.1471 "/>
 <polyline fill="none" stroke="#a0522d" points="1618.7313,-1324.8529 1560.2687,-1324.8529 "/>
-<text text-anchor="middle" x="1589.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#000000">Crude oil</text>
+<text text-anchor="middle" x="1589.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">Crude oil</text>
 </g>
 <!-- Petroleum gas -->
 <g id="node14" class="node">
@@ -88,10 +88,10 @@
 <!-- Iron ore -->
 <g id="node3" class="node">
 <title>Iron ore</title>
-<ellipse fill="none" stroke="#a0522d" cx="596.5" cy="-1358" rx="38.9931" ry="38.9931"/>
+<ellipse fill="#a0522d" stroke="#a0522d" cx="596.5" cy="-1358" rx="38.9931" ry="38.9931"/>
 <polyline fill="none" stroke="#a0522d" points="622.2923,-1387.2474 570.7077,-1387.2474 "/>
 <polyline fill="none" stroke="#a0522d" points="622.2923,-1328.7526 570.7077,-1328.7526 "/>
-<text text-anchor="middle" x="596.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#000000">Iron ore</text>
+<text text-anchor="middle" x="596.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">Iron ore</text>
 </g>
 <!-- Iron plate -->
 <g id="node15" class="node">
@@ -108,10 +108,10 @@
 <!-- Copper ore -->
 <g id="node4" class="node">
 <title>Copper ore</title>
-<ellipse fill="none" stroke="#a0522d" cx="1021.5" cy="-1358" rx="50.0912" ry="50.0912"/>
+<ellipse fill="#a0522d" stroke="#a0522d" cx="1021.5" cy="-1358" rx="50.0912" ry="50.0912"/>
 <polyline fill="none" stroke="#a0522d" points="1054.6001,-1395.5342 988.3999,-1395.5342 "/>
 <polyline fill="none" stroke="#a0522d" points="1054.6001,-1320.4658 988.3999,-1320.4658 "/>
-<text text-anchor="middle" x="1021.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#000000">Copper ore</text>
+<text text-anchor="middle" x="1021.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">Copper ore</text>
 </g>
 <!-- Copper plate -->
 <g id="node20" class="node">
@@ -128,10 +128,10 @@
 <!-- Water -->
 <g id="node5" class="node">
 <title>Water</title>
-<ellipse fill="none" stroke="#a0522d" cx="1710.5" cy="-1358" rx="32.4942" ry="32.4942"/>
+<ellipse fill="#a0522d" stroke="#a0522d" cx="1710.5" cy="-1358" rx="32.4942" ry="32.4942"/>
 <polyline fill="none" stroke="#a0522d" points="1731.9936,-1382.3728 1689.0064,-1382.3728 "/>
 <polyline fill="none" stroke="#a0522d" points="1731.9936,-1333.6272 1689.0064,-1333.6272 "/>
-<text text-anchor="middle" x="1710.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#000000">Water</text>
+<text text-anchor="middle" x="1710.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">Water</text>
 </g>
 <!-- Sulfur -->
 <g id="node13" class="node">
@@ -178,10 +178,10 @@
 <!-- Stone -->
 <g id="node6" class="node">
 <title>Stone</title>
-<ellipse fill="none" stroke="#a0522d" cx="822.5" cy="-1358" rx="30.5947" ry="30.5947"/>
+<ellipse fill="#a0522d" stroke="#a0522d" cx="822.5" cy="-1358" rx="30.5947" ry="30.5947"/>
 <polyline fill="none" stroke="#a0522d" points="842.704,-1380.9105 802.296,-1380.9105 "/>
 <polyline fill="none" stroke="#a0522d" points="842.704,-1335.0895 802.296,-1335.0895 "/>
-<text text-anchor="middle" x="822.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#000000">Stone</text>
+<text text-anchor="middle" x="822.5" y="-1354.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">Stone</text>
 </g>
 <!-- Stone brick -->
 <g id="node17" class="node">
@@ -210,7 +210,7 @@
 <!-- Automation science pack -->
 <g id="node7" class="node">
 <title>Automation science pack</title>
-<polygon fill="none" stroke="#ff0000" points="651,-252.5 496,-252.5 496,-97.5 651,-97.5 651,-252.5"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="651,-252.5 496,-252.5 496,-97.5 651,-97.5 651,-252.5"/>
 <polyline fill="none" stroke="#ff0000" points="508,-252.5 496,-240.5 "/>
 <polyline fill="none" stroke="#ff0000" points="496,-109.5 508,-97.5 "/>
 <polyline fill="none" stroke="#ff0000" points="639,-97.5 651,-109.5 "/>
@@ -220,7 +220,7 @@
 <!-- Logistics science pack -->
 <g id="node8" class="node">
 <title>Logistics science pack</title>
-<polygon fill="none" stroke="#00ff00" points="139,-244.5 0,-244.5 0,-105.5 139,-105.5 139,-244.5"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="139,-244.5 0,-244.5 0,-105.5 139,-105.5 139,-244.5"/>
 <polyline fill="none" stroke="#00ff00" points="12,-244.5 0,-232.5 "/>
 <polyline fill="none" stroke="#00ff00" points="0,-117.5 12,-105.5 "/>
 <polyline fill="none" stroke="#00ff00" points="127,-105.5 139,-117.5 "/>
@@ -230,7 +230,7 @@
 <!-- Chemical science pack -->
 <g id="node9" class="node">
 <title>Chemical science pack</title>
-<polygon fill="none" stroke="#0000ff" points="1379.5,-246 1237.5,-246 1237.5,-104 1379.5,-104 1379.5,-246"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1379.5,-246 1237.5,-246 1237.5,-104 1379.5,-104 1379.5,-246"/>
 <polyline fill="none" stroke="#0000ff" points="1249.5,-246 1237.5,-234 "/>
 <polyline fill="none" stroke="#0000ff" points="1237.5,-116 1249.5,-104 "/>
 <polyline fill="none" stroke="#0000ff" points="1367.5,-104 1379.5,-116 "/>
@@ -240,7 +240,7 @@
 <!-- Military science pack -->
 <g id="node10" class="node">
 <title>Military science pack</title>
-<polygon fill="none" stroke="#d3d3d3" points="402.5,-242 268.5,-242 268.5,-108 402.5,-108 402.5,-242"/>
+<polygon fill="#d3d3d3" stroke="#d3d3d3" points="402.5,-242 268.5,-242 268.5,-108 402.5,-108 402.5,-242"/>
 <polyline fill="none" stroke="#d3d3d3" points="280.5,-242 268.5,-230 "/>
 <polyline fill="none" stroke="#d3d3d3" points="268.5,-120 280.5,-108 "/>
 <polyline fill="none" stroke="#d3d3d3" points="390.5,-108 402.5,-120 "/>
@@ -250,7 +250,7 @@
 <!-- Production science pack -->
 <g id="node11" class="node">
 <title>Production science pack</title>
-<polygon fill="none" stroke="#9932cc" points="925,-249.5 776,-249.5 776,-100.5 925,-100.5 925,-249.5"/>
+<polygon fill="#9932cc" stroke="#9932cc" points="925,-249.5 776,-249.5 776,-100.5 925,-100.5 925,-249.5"/>
 <polyline fill="none" stroke="#9932cc" points="788,-249.5 776,-237.5 "/>
 <polyline fill="none" stroke="#9932cc" points="776,-112.5 788,-100.5 "/>
 <polyline fill="none" stroke="#9932cc" points="913,-100.5 925,-112.5 "/>
@@ -260,7 +260,7 @@
 <!-- Utility science pack -->
 <g id="node12" class="node">
 <title>Utility science pack</title>
-<polygon fill="none" stroke="#ffff00" points="1523,-237.5 1398,-237.5 1398,-112.5 1523,-112.5 1523,-237.5"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="1523,-237.5 1398,-237.5 1398,-112.5 1523,-112.5 1523,-237.5"/>
 <polyline fill="none" stroke="#ffff00" points="1410,-237.5 1398,-225.5 "/>
 <polyline fill="none" stroke="#ffff00" points="1398,-124.5 1410,-112.5 "/>
 <polyline fill="none" stroke="#ffff00" points="1511,-112.5 1523,-124.5 "/>

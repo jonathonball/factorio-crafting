@@ -1,23 +1,35 @@
 digraph science_packs {
 
   subgraph resources {
-    "Coal"       [shape = Mcircle, color = "#a0522d"];
-    "Crude oil"  [shape = Mcircle, color = "#a0522d"];
-    "Iron ore"   [shape = Mcircle, color = "#a0522d"];
-    "Copper ore" [shape = Mcircle, color = "#a0522d"];
-    "Water"      [shape = Mcircle, color = "#a0522d"];
-    "Stone"      [shape = Mcircle, color = "#a0522d"];
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Coal";
+    "Crude oil";
+    "Iron ore";
+    "Copper ore";
+    "Water";
+    "Stone";
 
     rank = min;
   }
 
   subgraph science_packs {
-    "Automation science pack" [shape = Msquare, color = "#ff0000"];
-    "Logistics science pack"  [shape = Msquare, color = "#00ff00"];
-    "Chemical science pack"   [shape = Msquare, color = "#0000ff"];
-    "Military science pack"   [shape = Msquare, color = "#D3D3D3"];
-    "Production science pack" [shape = Msquare, color = "#9932CC"];
-    "Utility science pack"    [shape = Msquare, color = "#FFFF00"];
+    node [
+      style = filled,
+      shape = Msquare
+    ];
+
+    "Automation science pack" [color = "#ff0000"];
+    "Logistics science pack"  [color = "#00ff00"];
+    "Chemical science pack"   [color = "#0000ff"];
+    "Military science pack"   [color = "#D3D3D3"];
+    "Production science pack" [color = "#9932CC"];
+    "Utility science pack"    [color = "#FFFF00"];
 
     rank = max;
   }
@@ -194,7 +206,7 @@ digraph science_packs {
     "Flying robot frame";
     "Low density structure";
     "Processing unit";
-  } -> "Utility science pack"    [color = "#FFFF00"];
+  } -> "Utility science pack" [color = "#FFFF00"];
 
   ratio = 0.8;
 
