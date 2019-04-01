@@ -21,7 +21,8 @@ digraph science_packs {
   subgraph science_packs {
     node [
       style = filled,
-      shape = Msquare
+      shape = box,
+      width = 3
     ];
 
     "Automation science pack" [color = "#ff0000"];
@@ -209,5 +210,6 @@ digraph science_packs {
   } -> "Utility science pack" [color = "#FFFF00"];
 
   ratio = 0.8;
+  width=20;
 
 }
