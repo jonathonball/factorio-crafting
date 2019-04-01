@@ -1,5 +1,7 @@
 digraph science_packs {
 
+  label = "Science pack dependencies; factorio 0.17; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
   subgraph resources {
     node [
       style     = filled,
