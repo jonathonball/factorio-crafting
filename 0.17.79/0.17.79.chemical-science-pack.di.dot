@@ -1,0 +1,87 @@
+digraph science_packs {
+
+  label = "Chemical pack dependencies; factorio 0.17.79; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Coal";
+    "Crude oil";
+    "Iron ore";
+    "Copper ore";
+    "Water";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Chemical science pack"   [color = "#0000ff"];
+
+    rank = max;
+  }
+
+  "Water" -> "Sulfur" [color = "#a0522d"];
+  "Petroleum gas" -> "Sulfur";
+
+  {
+    "Crude oil";
+    "Water";
+  } -> {
+    "Petroleum gas";
+  } [color = "#a0522d"];
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  {
+    "Coal";
+    "Petroleum gas";
+  } -> "Plastic bar" [color = "#a0522d"];
+
+  "Iron plate" -> "Pipe";
+
+  "Iron plate" -> "Iron gear";
+
+  "Iron plate" -> "Steel plate";
+
+  "Copper plate" -> "Copper cable";
+
+  {
+    "Iron plate";
+    "Copper cable";
+  } -> "Electronic circuit";
+
+  {
+    "Steel plate";
+    "Iron gear";
+    "Pipe";
+  } -> "Engine unit";
+
+  {
+    "Plastic bar";
+    "Copper cable";
+    "Electronic circuit";
+  } -> "Advanced circuit";
+
+  {
+    "Engine unit";
+    "Sulfur";
+    "Advanced circuit";
+  } -> "Chemical science pack" [color = "#0000ff"];
+
+  ratio = 0.8;
+  width=20;
+
+}
