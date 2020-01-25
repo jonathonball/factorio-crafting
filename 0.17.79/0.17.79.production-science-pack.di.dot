@@ -1,0 +1,95 @@
+digraph science_packs {
+
+  label = "Production pack dependencies; factorio 0.17.79; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Coal";
+    "Crude oil";
+    "Iron ore";
+    "Copper ore";
+    "Water";
+    "Stone";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Production science pack" [color = "#9932CC"];
+
+    rank = max;
+  }
+
+  "Stone" -> "Stone brick" [color = "#a0522d"];
+
+  {
+    "Crude oil";
+    "Water";
+  } -> {
+    "Petroleum gas";
+  } [color = "#a0522d"];
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  {
+    "Coal";
+    "Petroleum gas";
+  } -> "Plastic bar" [color = "#a0522d"];
+
+  "Stone" -> "Rail" [color = "#a0522d"];
+  {
+    "Iron stick"
+    "Steel plate"
+  } -> "Rail";
+
+  "Iron plate" -> "Iron stick";
+
+  "Iron plate" -> "Steel plate";
+
+  "Copper plate" -> "Copper cable";
+
+  {
+    "Iron plate";
+    "Copper cable";
+  } -> "Electronic circuit";
+
+  {
+    "Plastic bar";
+    "Copper cable";
+    "Electronic circuit";
+  } -> "Advanced circuit";
+
+  {
+    "Advanced circuit";
+    "Steel plate";
+    "Stone brick";
+  } -> "Electric furnace";
+
+  {
+    "Electronic circuit";
+    "Advanced circuit";
+  } -> "Productivity module";
+
+  {
+    "Electric furnace";
+    "Productivity module";
+    "Rail";
+  } -> "Production science pack" [color = "#9932CC"];
+
+  ratio = 0.8;
+
+}
