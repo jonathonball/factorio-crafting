@@ -1,0 +1,66 @@
+digraph science_packs {
+
+  label = "Military pack dependencies; factorio 0.17.79; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Coal";
+    "Iron ore";
+    "Copper ore";
+    "Stone";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Military science pack"   [color = "#D3D3D3"];
+
+    rank = max;
+  }
+
+  "Stone" -> "Stone brick" [color = "#a0522d"];
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  "Coal" -> "Grenade" [color = "#a0522d"];
+  "Iron plate" -> "Grenade";
+
+  "Stone" -> "Rail" [color = "#a0522d"];
+  {
+    "Iron stick"
+    "Steel plate"
+  } -> "Rail";
+
+  "Iron plate" -> "Firearm magazine";
+
+  "Iron plate" -> "Iron stick";
+
+  "Iron plate" -> "Steel plate";
+
+  {
+    "Copper plate";
+    "Steel plate";
+    "Firearm magazine";
+  } -> "Piercing rounds magazine";
+
+  {
+    "Piercing rounds magazine";
+    "Grenade";
+    "Stone brick";
+  } -> "Military science pack" [color = "#D3D3D3"];
+
+}
