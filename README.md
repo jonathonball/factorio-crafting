@@ -10,7 +10,8 @@ Instructions for rendering these yourself.
 $ sudo apt install graphviz
 $ git clone git@github.com:jonathonball/factorio-crafting.git
 $ chmod u+x generate.sh
-$ ./generate.sh 0.17 # where 0.17 is the version you want to generate
+$ ./generate.sh VERSION
+# where VERSION is the version you want to generate, for example "0.17"
 ```
 
 Pre-rendered
