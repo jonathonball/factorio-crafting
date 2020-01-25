@@ -8,6 +8,6 @@ for dotfile in $(find $SCRIPTPATH -name *.dot); do
   for format in svg png; do
     destination=${version}/${format}
     mkdir -p $destination;
-    echo dot -T $format $dotfile > ${destination}/${filename}.${format}
+    dot -T $format $dotfile > ${destination}/${filename}.${format}
   done;
 done;
