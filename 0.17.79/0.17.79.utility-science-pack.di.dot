@@ -1,0 +1,126 @@
+digraph science_packs {
+
+  label = "Utility pack dependencies; factorio 0.17.79; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Coal";
+    "Crude oil";
+    "Iron ore";
+    "Copper ore";
+    "Water";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Utility science pack"    [color = "#FFFF00"];
+
+    rank = max;
+  }
+
+  "Water" -> "Sulfur" [color = "#a0522d"];
+  "Petroleum gas" -> "Sulfur";
+
+  {
+    "Iron plate";
+    "Sulfur";
+  } -> "Sulfuric acid";
+  "Water" -> "Sulfuric acid" [color = "#a0522d"];
+
+  {
+    "Crude oil";
+    "Water";
+  } -> {
+    "Petroleum gas";
+    "Heavy oil";
+  } [color = "#a0522d"];
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  {
+    "Coal";
+    "Petroleum gas";
+  } -> "Plastic bar" [color = "#a0522d"];
+
+  "Iron plate" -> "Pipe";
+
+  "Iron plate" -> "Iron gear";
+
+  "Iron plate" -> "Steel plate";
+
+  "Copper plate" -> "Copper cable";
+
+  {
+    "Iron plate";
+    "Copper cable";
+  } -> "Electronic circuit";
+
+  {
+    "Steel plate";
+    "Iron gear";
+    "Pipe";
+  } -> "Engine unit";
+
+  {
+    "Plastic bar";
+    "Copper cable";
+    "Electronic circuit";
+  } -> "Advanced circuit";
+
+  {
+    "Copper plate";
+    "Iron plate";
+    "Sulfuric acid";
+  } -> "Battery";
+
+  {
+    "Copper plate";
+    "Plastic bar";
+    "Steel plate";
+  } -> "Low density structure";
+
+  {
+    "Electronic circuit";
+    "Advanced circuit";
+    "Sulfuric acid";
+  } -> "Processing unit";
+
+  "Heavy oil" -> "Lubricant";
+
+  {
+    "Electronic circuit";
+    "Engine unit";
+    "Lubricant";
+  } -> "Electric engine unit"
+
+  {
+    "Battery";
+    "Electric engine unit";
+    "Electronic circuit";
+    "Steel plate";
+  } -> "Flying robot frame";
+
+  {
+    "Flying robot frame";
+    "Low density structure";
+    "Processing unit";
+  } -> "Utility science pack" [color = "#FFFF00"];
+
+  ratio = 0.8;
+
+}
