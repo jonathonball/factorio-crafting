@@ -1,21 +1,13 @@
 #!/usr/bin/env bash
 
-error_message="Usage:\t$(basename $0) VERSION";
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-if [ -z "$1" ]; then
-    echo -e "$error_message";
-    exit 1;
-fi;
-
-if ! [ -d "./${1}" ]; then
-    echo -e "$error_message";
-    exit 1; 
-else
-    cd $1;
-    for format in svg png; do
-        for file in *.dot; do
-            dot -T $format -O $file;
-        done;
-    done;
-fi;
-
+for dotfile in $(find $SCRIPTPATH -name *.dot); do
+  version=$(dirname $dotfile);
+  filename=$(basename $dotfile .dot);
+  for format in svg png; do
+    destination=${version}/${format}
+    mkdir -p $destination;
+    echo dot -T $format $dotfile > ${destination}/${filename}.${format}
+  done;
+done;
