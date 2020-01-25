@@ -1,0 +1,63 @@
+digraph science_packs {
+
+  label = "Logistics pack dependencies; factorio 0.17.79; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Iron ore";
+    "Copper ore";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Logistics science pack"  [color = "#00ff00"];
+
+    rank = max;
+  }
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  "Iron plate" -> "Iron gear";
+
+  "Copper plate" -> "Copper cable";
+
+  {
+    "Iron plate";
+    "Iron gear";
+  } -> "Transport belt";
+
+  {
+    "Iron plate";
+    "Copper cable";
+  } -> "Electronic circuit";
+
+  {
+    "Iron plate";
+    "Iron gear";
+    "Electronic circuit";
+  } -> "Inserter";
+
+  {
+    "Transport belt";
+    "Inserter";
+  } -> "Logistics science pack" [color = "#00ff00"];
+
+  ratio = 0.8;
+  width=20;
+
+}

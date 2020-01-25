@@ -1,0 +1,204 @@
+digraph science_packs {
+
+  label = "Science pack dependencies; factorio 0.17; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Coal";
+    "Crude oil";
+    "Iron ore";
+    "Copper ore";
+    "Water";
+    "Stone";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Automation science pack" [color = "#ff0000"];
+    "Logistics science pack"  [color = "#00ff00"];
+    "Chemical science pack"   [color = "#0000ff"];
+    "Military science pack"   [color = "#D3D3D3"];
+    "Production science pack" [color = "#9932CC"];
+    "Utility science pack"    [color = "#FFFF00"];
+
+    rank = max;
+  }
+
+  "Water" -> "Sulfur" [color = "#a0522d"];
+  "Petroleum gas" -> "Sulfur";
+
+  {
+    "Iron plate";
+    "Sulfur";
+  } -> "Sulfuric acid";
+  "Water" -> "Sulfuric acid" [color = "#a0522d"];
+
+  "Stone" -> "Stone brick" [color = "#a0522d"];
+
+  {
+    "Crude oil";
+    "Water";
+  } -> {
+    "Petroleum gas";
+    "Heavy oil";
+  } [color = "#a0522d"];
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  "Coal" -> "Grenade" [color = "#a0522d"];
+  "Iron plate" -> "Grenade";
+
+  {
+    "Coal";
+    "Petroleum gas";
+  } -> "Plastic bar" [color = "#a0522d"];
+
+  "Stone" -> "Rail" [color = "#a0522d"];
+  {
+    "Iron stick"
+    "Steel plate"
+  } -> "Rail";
+
+  "Iron plate" -> "Firearm magazine";
+
+  "Iron plate" -> "Iron stick";
+
+  "Iron plate" -> "Pipe";
+
+  "Iron plate" -> "Iron gear";
+
+  "Iron plate" -> "Steel plate";
+
+  "Copper plate" -> "Copper cable";
+
+  {
+    "Iron plate";
+    "Iron gear";
+  } -> "Transport belt";
+
+  {
+    "Iron plate";
+    "Copper cable";
+  } -> "Electronic circuit";
+
+  {
+    "Iron plate";
+    "Iron gear";
+    "Electronic circuit";
+  } -> "Inserter";
+
+  {
+    "Steel plate";
+    "Iron gear";
+    "Pipe";
+  } -> "Engine unit";
+
+  {
+    "Plastic bar";
+    "Copper cable";
+    "Electronic circuit";
+  } -> "Advanced circuit";
+
+  {
+    "Copper plate";
+    "Steel plate";
+    "Firearm magazine";
+  } -> "Piercing rounds magazine";
+
+  {
+    "Advanced circuit";
+    "Steel plate";
+    "Stone brick";
+  } -> "Electric furnace";
+
+  {
+    "Electronic circuit";
+    "Advanced circuit";
+  } -> "Productivity module";
+
+  {
+    "Copper plate";
+    "Iron plate";
+    "Sulfuric acid";
+  } -> "Battery";
+
+  {
+    "Copper plate";
+    "Plastic bar";
+    "Steel plate";
+  } -> "Low density structure";
+
+  {
+    "Electronic circuit";
+    "Advanced circuit";
+    "Sulfuric acid";
+  } -> "Processing unit";
+
+  "Heavy oil" -> "Lubricant";
+
+  {
+    "Electronic circuit";
+    "Engine unit";
+    "Lubricant";
+  } -> "Electric engine unit"
+
+  {
+    "Battery";
+    "Electric engine unit";
+    "Electronic circuit";
+    "Steel plate";
+  } -> "Flying robot frame";
+
+  {
+    "Copper plate";
+    "Iron gear";
+  } -> "Automation science pack" [color = "#ff0000"];
+
+  {
+    "Transport belt";
+    "Inserter";
+  } -> "Logistics science pack" [color = "#00ff00"];
+
+  {
+    "Engine unit";
+    "Sulfur";
+    "Advanced circuit";
+  } -> "Chemical science pack" [color = "#0000ff"];
+
+  {
+    "Piercing rounds magazine";
+    "Grenade";
+    "Stone brick";
+  } -> "Military science pack" [color = "#D3D3D3"];
+
+  {
+    "Electric furnace";
+    "Productivity module";
+    "Rail";
+  } -> "Production science pack" [color = "#9932CC"];
+
+  {
+    "Flying robot frame";
+    "Low density structure";
+    "Processing unit";
+  } -> "Utility science pack" [color = "#FFFF00"];
+
+  ratio = 0.8;
+  width=20;
+
+}

@@ -1,0 +1,45 @@
+digraph science_packs {
+
+  label = "Automation science pack dependencies; factorio 0.17.79; Visualization by Jonathon Ball (jonathon.ball@gmail.com)";
+
+  subgraph resources {
+    node [
+      style     = filled,
+      fontcolor = white,
+      shape     = Mcircle,
+      color     = "#a0522d"
+    ];
+
+    "Iron ore";
+    "Copper ore";
+
+    rank = min;
+  }
+
+  subgraph science_packs {
+    node [
+      style = filled,
+      shape = box,
+      width = 3
+    ];
+
+    "Automation science pack" [color = "#ff0000"];
+
+    rank = max;
+  }
+
+  "Iron ore" -> "Iron plate" [color = "#a0522d"];
+
+  "Copper ore" -> "Copper plate" [color = "#a0522d"];
+
+  "Iron plate" -> "Iron gear";
+
+  {
+    "Copper plate";
+    "Iron gear";
+  } -> "Automation science pack" [color = "#ff0000"];
+
+  ratio = 0.8;
+  width=20;
+
+}
