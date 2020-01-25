@@ -16,6 +16,9 @@ $ ./generate.sh VERSION
 
 Pre-rendered
 ------------
+### 0.17.79 Science packs
+![0.17.79.science-packs.di.dot.png](https://raw.githubusercontent.com/jonathonball/factorio-crafting/master/0.17.79/0.17.79.science-packs.di.dot.png)
+
 ### 0.17 Science packs
 ![0.17.science-packs.di.dot.png](https://raw.githubusercontent.com/jonathonball/factorio-crafting/master/0.17/0.17.science-packs.di.dot.png)
 
